@@ -16,9 +16,11 @@
     <p>Get a list of all of a GitHub user's repos by typing in their username below.</p>
     <form>
         <label for="username">Enter username here:</label>
-        <input type="text" name="username" id="username-input" required>
+        <input type="text" name="username" id="js-username-input" required>
+        <input type="submit" value="Go!">
     </form>
 </section>
+<p id="js-error-message"></p>
 <section class="hidden">
     <h2>Results</h2>
     <ul id="results-list">
