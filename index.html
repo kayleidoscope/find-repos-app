@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header>
     <h1>Repo finder</h1>
+</header>
+<section>
+    <p>Get a list of all of a GitHub user's repos by typing in their username below.</p>
+    <form>
+        <label for="username">Enter username here:</label>
+        <input type="text" name="username" id="username-input" required>
+    </form>
+</section>
+<section class="hidden">
+    <h2>Results</h2>
+    <ul id="results-list">
+    </ul>
+</section>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
