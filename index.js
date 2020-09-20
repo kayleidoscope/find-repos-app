@@ -10,7 +10,7 @@ function displayResults(responseJson) {
         console.log(responseJson[i].svn_url);
         console.log(responseJson[i].name);
         $('#results-list').append(
-            `<li><p><a href="${responseJson[i].svn_url}">${responseJson[i].name}</a></p></li>`
+            `<li><p><a href="${responseJson[i].svn_url}" target="_blank">${responseJson[i].name}</a></p></li>`
         )
     }
     //display the results section
@@ -53,7 +53,7 @@ function watchForm() {
     $('form').submit(event => {
         event.preventDefault();
         //grab the entered input and set it to a variable
-        const userEntry = $('#js-username-input').val();
+        const userEntry = $('#js-username-input').val().toLowerCase();
         console.log(`searching for ${userEntry}'s repos...`);
         //run userEntry through getRepo function
         getRepos(userEntry);
